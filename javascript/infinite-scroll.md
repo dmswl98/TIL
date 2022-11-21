@@ -15,6 +15,12 @@
 - 전통적인 방식
 - window의 scroll 이벤트가 일어날 때마다 브라우저 화면의 높이, 스크롤바의 위치를 이용해 body(컨텐츠)의 끝까지 다다랐으면 새로운 데이터를 가져오는 방식을 말한다.
 
+<br />
+
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/76807107/203087608-463d51bb-d00d-49fe-9129-4091054daaa2.png" width="60%" heigth="auto" />
+</p>
+
 - `window.innerHeight` : 클라이언트에서 보여지는 화면 중 탭, url 주소창, 북마크 탭을 제외한 브라우저의 높이
 - `window.scrollY` : 현재 스크롤바 위치
 - `document.body.offsetHeight` : body의 height
@@ -39,7 +45,10 @@ window.addEventListener("scroll", () => {
 1. isLoading의 상태 존재 이유
 
 - 데이터를 이미 요청했음에도 계속 데이터를 요청하는 문제가 발생한다.
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7f6ef74-9be0-4b94-a4dc-ea9189361f07/Untitled.png)
+  <p align="center">
+      <img src="https://user-images.githubusercontent.com/76807107/203087867-73105ff6-40f6-43a4-8c40-acdd34148fe1.png" width="50%" heigth="auto" />
+  </p>
+
 - 이 경우 isLoading 상태를 두어 데이터를 요청하고 응답받기 전까지는 재요청을 하지 않도록 할 수 있다.
 
 2. totalCount의 존재 이유
