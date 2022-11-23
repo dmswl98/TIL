@@ -54,13 +54,11 @@ $main.addEventListener("dragover", (e) => {
 $main.addEventListener("drop", (e) => {
   e.preventDefault();
   const droppedAnimalName = e.dataTransfer.getData("animal");
-
   const droppedAnimalIndex = animals.findIndex(
     (animal) => animal.name === droppedAnimalName
   );
 
   const nextState = [...animals];
-  console.log(nextState[droppedAnimalIndex]);
   nextState[droppedAnimalIndex].isSleep =
     !nextState[droppedAnimalIndex].isSleep;
 
